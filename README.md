@@ -7,12 +7,15 @@
 <br />
 <p align="center">
     The TVMazeApp is an iOS application that lists TV Shows, seasons, episodes and other informations found on TVMaze Api.
+    On this branch, the app is getting all the shows by incrementing the pages until there is nothing else to get.
+    Please, use this branch to value the code for getting all shows and saving them on the database, rather then the user experience. I wasn't able to do both, so user experience and screen designs are available on main branch. 
 </p>
 
 ## Features
 
 - [x] Get all shows featured on TVMaze Api and save on local storage
 - [x] See information about the shows, its seasons and episodes
+- [x] On the First Page, the app is getting all the shows by incrementing the pages until there is nothing else to get 
 
 ## Requirements
 
