@@ -11,6 +11,7 @@ target 'TVMazeApp' do
 	pod "RxSwift"
 	pod "RxCocoa"
 	pod "SDWebImage"
+	pod "RealmSwift"
 
   target 'TVMazeAppTests' do
     inherit! :search_paths

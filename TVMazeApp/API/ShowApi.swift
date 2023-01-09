@@ -10,12 +10,13 @@ import RxSwift
 import SwiftyJSON
 
 class ShowApi {
-    static func getShows() -> Observable<[Show]> {
-        return ApiRequest.call(path: "https://api.tvmaze.com/shows?page=1")
+    static func getShows(page: Int) -> Observable<[Show]> {
+        return ApiRequest.call(path: "https://api.tvmaze.com/shows?page=\(page)")
             .map { json in
                 let array = json.arrayValue
-                print(array)
-                return array.map { Show(from: $0) }
+                let shows = array.map { Show(from: $0) }
+                try? Database.saveShows(shows)
+                return shows
             }
     }
     

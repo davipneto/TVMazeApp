@@ -9,6 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import RxSwift
+import RealmSwift
 
 class ShowListViewController: UITableViewController {
     let viewModel = ShowListViewModel()
@@ -20,21 +21,30 @@ class ShowListViewController: UITableViewController {
         navigationItem.backButtonDisplayMode = .minimal
         setupTableView()
         setupSearchBar()
+        bindGetShowsPage()
         loadShows()
     }
     
     private func loadShows() {
         showLoadingView()
         viewModel.fetchShows()
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
-                guard let self = self else { return }
+    }
+    
+    private func bindGetShowsPage() {
+        viewModel.getNextShowsPage
+            .flatMap { page in
+                print("will try page \(page)")
+                return self.viewModel.fetchShowsPage(page: page)
+            }
+            .subscribe(onNext: { _ in
+                print("successful")
+            }, onError: { error in
+                print("deu erro")
+            }, onCompleted: {
+                print("acabou!!")
                 self.hideLoadingView()
-                self.tableView.reloadData()
-            }, onError: { [weak self] error in
-                guard let self = self else { return }
-                self.hideLoadingView()
-                print(error.localizedDescription)
+                guard let shows = try? Realm().objects(Show.self) else { return }
+                print(shows.count)
             })
             .disposed(by: disposeBag)
     }

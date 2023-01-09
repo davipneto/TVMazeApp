@@ -37,6 +37,7 @@
 		53B25E29296B794E003D5FF5 /* ShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B25E28296B794E003D5FF5 /* ShowDetailsViewModel.swift */; };
 		53B25E2B296BAB72003D5FF5 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B25E2A296BAB72003D5FF5 /* ShadowView.swift */; };
 		53B25E2E296BABA3003D5FF5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B25E2D296BABA3003D5FF5 /* UIViewController+Extensions.swift */; };
+		53BFC6F5296CA7E700034F89 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BFC6F4296CA7E700034F89 /* Database.swift */; };
 		53E831DC296C527200651EDF /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E831DA296C527200651EDF /* EpisodeDetailsViewController.swift */; };
 		53E831DD296C527200651EDF /* EpisodeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E831DB296C527200651EDF /* EpisodeDetailsViewController.xib */; };
 		BD9302792AFD4BDCD51E46BC /* Pods_TVMazeApp_TVMazeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F864B98A40A2E394F32349CA /* Pods_TVMazeApp_TVMazeAppUITests.framework */; };
@@ -94,6 +95,7 @@
 		53B25E28296B794E003D5FF5 /* ShowDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewModel.swift; sourceTree = "<group>"; };
 		53B25E2A296BAB72003D5FF5 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		53B25E2D296BABA3003D5FF5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		53BFC6F4296CA7E700034F89 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		53E831DA296C527200651EDF /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 		53E831DB296C527200651EDF /* EpisodeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeDetailsViewController.xib; sourceTree = "<group>"; };
 		5F5740966B7477DE8A8B4270 /* Pods_TVMazeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVMazeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +219,7 @@
 			children = (
 				53B25E1D296B4C8C003D5FF5 /* ShowApi.swift */,
 				53B25E20296B6B69003D5FF5 /* ApiRequest.swift */,
+				53BFC6F4296CA7E700034F89 /* Database.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				53B25E1E296B4C8C003D5FF5 /* ShowApi.swift in Sources */,
 				53093CF4296BC18900199612 /* ShowDetailsEpisodeTableViewCell.swift in Sources */,
 				53093CFA296BD91A00199612 /* Int+Formatter.swift in Sources */,
+				53BFC6F5296CA7E700034F89 /* Database.swift in Sources */,
 				539DF1E3296B30CD0046E916 /* SceneDelegate.swift in Sources */,
 				53093CED296BB10B00199612 /* Season.swift in Sources */,
 				53093CEF296BB12400199612 /* Episode.swift in Sources */,
