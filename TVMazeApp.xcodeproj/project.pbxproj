@@ -15,6 +15,8 @@
 		53093CF5296BC18900199612 /* ShowDetailsEpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53093CF3296BC18900199612 /* ShowDetailsEpisodeTableViewCell.xib */; };
 		53093CF8296BD8F800199612 /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53093CF7296BD8F800199612 /* SelfSizingTableView.swift */; };
 		53093CFA296BD91A00199612 /* Int+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53093CF9296BD91A00199612 /* Int+Formatter.swift */; };
+		532827C2296C754000C9175C /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532827C1296C754000C9175C /* LoadingOverlay.swift */; };
+		532827C4296C75FC00C9175C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532827C3296C75FC00C9175C /* UIView+Constraints.swift */; };
 		539DF1E1296B30CD0046E916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DF1E0296B30CD0046E916 /* AppDelegate.swift */; };
 		539DF1E3296B30CD0046E916 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DF1E2296B30CD0046E916 /* SceneDelegate.swift */; };
 		539DF1E5296B30CD0046E916 /* ShowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539DF1E4296B30CD0046E916 /* ShowListViewController.swift */; };
@@ -66,6 +68,8 @@
 		53093CF3296BC18900199612 /* ShowDetailsEpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDetailsEpisodeTableViewCell.xib; sourceTree = "<group>"; };
 		53093CF7296BD8F800199612 /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
 		53093CF9296BD91A00199612 /* Int+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Formatter.swift"; sourceTree = "<group>"; };
+		532827C1296C754000C9175C /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		532827C3296C75FC00C9175C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		539DF1DD296B30CD0046E916 /* TVMazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539DF1E0296B30CD0046E916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539DF1E2296B30CD0046E916 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				53093CF7296BD8F800199612 /* SelfSizingTableView.swift */,
+				532827C1296C754000C9175C /* LoadingOverlay.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			children = (
 				53B25E2D296BABA3003D5FF5 /* UIViewController+Extensions.swift */,
 				53093CF9296BD91A00199612 /* Int+Formatter.swift */,
+				532827C3296C75FC00C9175C /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -530,6 +536,7 @@
 				53B25E2E296BABA3003D5FF5 /* UIViewController+Extensions.swift in Sources */,
 				53E831DC296C527200651EDF /* EpisodeDetailsViewController.swift in Sources */,
 				53093CF8296BD8F800199612 /* SelfSizingTableView.swift in Sources */,
+				532827C4296C75FC00C9175C /* UIView+Constraints.swift in Sources */,
 				539DF213296B33610046E916 /* ShowListTableViewCell.swift in Sources */,
 				53B25E1E296B4C8C003D5FF5 /* ShowApi.swift in Sources */,
 				53093CF4296BC18900199612 /* ShowDetailsEpisodeTableViewCell.swift in Sources */,
@@ -540,6 +547,7 @@
 				53B25E21296B6B69003D5FF5 /* ApiRequest.swift in Sources */,
 				53B25E26296B6FE6003D5FF5 /* ShowDetailsViewController.swift in Sources */,
 				53B25E29296B794E003D5FF5 /* ShowDetailsViewModel.swift in Sources */,
+				532827C2296C754000C9175C /* LoadingOverlay.swift in Sources */,
 				53B25E1A296B4A14003D5FF5 /* ShowListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

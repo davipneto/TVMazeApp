@@ -80,10 +80,14 @@ class ShowDetailsViewController: UIViewController {
     }
     
     private func getEpisodes() {
+        showLoadingView()
         viewModel.fetchEpisodes()
+            .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
+                self?.hideLoadingView()
                 self?.seasonsTableView.reloadData()
-            }, onError: { error in
+            }, onError: { [weak self] error in
+                self?.hideLoadingView()
                 print(error.localizedDescription)
             })
             .disposed(by: disposeBag)
@@ -147,5 +151,13 @@ extension ShowDetailsViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let episode = viewModel.seasonItems[indexPath.section].season.episodes[indexPath.row]
+        let episodeDetailsViewModel = EpisodeDetailsViewModel(episode: episode, showName: viewModel.show.name)
+        let episodeDetailsViewController = EpisodeDetailsViewController(viewModel: episodeDetailsViewModel)
+        let navigationController = UINavigationController(rootViewController: episodeDetailsViewController)
+        present(navigationController, animated: true)
     }
 }

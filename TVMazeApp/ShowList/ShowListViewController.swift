@@ -24,11 +24,16 @@ class ShowListViewController: UITableViewController {
     }
     
     private func loadShows() {
+        showLoadingView()
         viewModel.fetchShows()
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
-                self?.tableView.reloadData()
-            }, onError: { error in
+                guard let self = self else { return }
+                self.hideLoadingView()
+                self.tableView.reloadData()
+            }, onError: { [weak self] error in
+                guard let self = self else { return }
+                self.hideLoadingView()
                 print(error.localizedDescription)
             })
             .disposed(by: disposeBag)
@@ -54,7 +59,7 @@ class ShowListViewController: UITableViewController {
         }
         
         let show = viewModel.filteredShows[indexPath.row]
-        cell.show = show
+        cell.setData(show)
         return cell
     }
     

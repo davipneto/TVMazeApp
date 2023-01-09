@@ -12,4 +12,13 @@ extension UIViewController {
         return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
         (self.navigationController?.navigationBar.frame.height ?? 0.0)
     }
+    
+    func showLoadingView() {
+        let navigationView = navigationController?.view
+        LoadingOverlay.shared.showOverlay(view: navigationView ?? view)
+    }
+    
+    func hideLoadingView() {
+        LoadingOverlay.shared.hideOverlayView()
+    }
 }

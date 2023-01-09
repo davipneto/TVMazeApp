@@ -10,17 +10,11 @@ import SDWebImage
 
 class ShowListTableViewCell: UITableViewCell {
     static let identifier = "showListCell"
-    var show: Show? {
-        didSet {
-            guard let show = show else { return }
-            setData(show)
-        }
-    }
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    private func setData(_ show: Show) {
+    func setData(_ show: Show) {
         if let url = URL(string: show.mediumImageUrl) {
             posterImageView.sd_setImage(with: url)
         }

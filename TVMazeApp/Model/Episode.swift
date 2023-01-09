@@ -21,7 +21,10 @@ struct Episode {
         name = json["name"].stringValue
         number = json["number"].intValue
         season = json["season"].intValue
-        summary = json["summary"].stringValue
+        let summaryHtml = json["summary"].stringValue
+        let summaryData = Data(summaryHtml.utf8)
+        let attributtedString = (try? NSAttributedString(data: summaryData, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)) ?? NSAttributedString(string: "")
+        summary = attributtedString.string
         
         let imgJSON = json["image"]
         mediumImageUrl = imgJSON["medium"].string
