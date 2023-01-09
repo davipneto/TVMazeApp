@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
+//  EpisodeDetailsViewController.swift
 //  TVMazeApp
 //
-//  Created by Davi Pereira on 08/01/23.
+//  Created by Davi Pereira on 09/01/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class EpisodeDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
