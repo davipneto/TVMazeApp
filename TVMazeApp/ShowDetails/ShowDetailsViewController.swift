@@ -46,13 +46,13 @@ class ShowDetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .label
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.subviews.first?.alpha = 1
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.label]
     }
     
     private func setupScrollView() {
@@ -104,7 +104,7 @@ extension ShowDetailsViewController: UIScrollViewDelegate {
         )
         guard let navigationBar = navigationController?.navigationBar else { return }
         navigationBar.subviews.first?.alpha = alpha
-        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white.withAlphaComponent(alpha)]
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.label.withAlphaComponent(alpha)]
     }
 }
 
@@ -132,7 +132,7 @@ extension ShowDetailsViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var config = UIButton.Configuration.gray()
         config.imagePlacement = .trailing
-        config.baseForegroundColor = UIColor.white
+        config.baseForegroundColor = UIColor.label
         let button = UIButton(configuration: config)
         button.rx.tap
             .observe(on: MainScheduler.instance)
